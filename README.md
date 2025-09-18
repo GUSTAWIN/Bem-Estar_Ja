@@ -17,6 +17,10 @@
 # Integrantes
 <h3>NOMES:</h3>
 
+● CARLOS EDUARDO PEREIRA <br>
+● GIOVANE SOLDERA RIBEIRO <br>
+● GUSTAVO TABORDA MEDEIROS <br>
+
 # ODS
 
 ![Imagem da ODS 3, Saúde e bem estar](https://github.com/user-attachments/assets/05cdeb03-0f13-4803-80ce-6fcceb537634)
