@@ -10,7 +10,8 @@
 * [Estrutura do projeto](#Estrutura)
 
 # Integrantes
-<h1>NOMES:</h1>
+<h3>NOMES:</h3>
+
 # ODS
 
 # Descrição
