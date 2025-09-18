@@ -1,11 +1,11 @@
 # Front-end-grupo
 
-#indice
-*[Índice](#Índice)
-*[Nome dos(as) integrantes da equipe](#Integrantes)
-*[ODS selecionado ou instituição atendida](#ODS)
-*[Descrição do projeto](#Descrição)
-*[Estrutura do projeto](#Estrutura)
+# Índice
+* [Índice](#Índice)
+* [Nome dos(as) integrantes da equipe](#Integrantes)
+* [ODS selecionado ou instituição atendida](#ODS)
+* [Descrição do projeto](#Descrição)
+* [Estrutura do projeto](#Estrutura)
 \n\n
 # Índice 
 * [Título e Imagem de capa](#Título-e-Imagem-de-capa)
