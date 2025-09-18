@@ -1,6 +1,8 @@
 # Front-end-grupo
 
-> :construction: Projeto em construção :construction:
+<h4 align="center"> 
+	:construction:  Projeto em construção  :construction:
+</h4>
 
 # Índice
 * [Índice](#Índice)
