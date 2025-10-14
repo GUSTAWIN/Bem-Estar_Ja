@@ -1,0 +1,39 @@
+*{
+    background-color: rgb(225, 226, 255);
+}
+
+.Nome{
+    background-color: rgb(128, 137, 250);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.705);
+    font-size: 60px;
+    align-self: center;
+    font-family: Courier New, monospace;
+}
+h2{
+    background-color: rgb(128, 137, 250);
+    font-family: FreeMono, monospace;
+    font-style: italic;
+}
+#foto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 10%;
+}
+.divisoria{
+    border-color: rgb(128, 137, 250);
+    box-sizing:border-box;
+    width:100%;
+    height: 15%;
+    background-color: rgb(128, 137, 250);
+}
+
+a:hover{
+    color: brown;
+    font-style:oblique;
+}
+
+#CV_Fim{
+    text-decoration: underline overline rgb(128, 137, 250);;
+}
