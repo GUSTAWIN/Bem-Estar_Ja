@@ -147,6 +147,16 @@ a:hover {
   margin: .25rem 0;
 }
 
+.card-un{
+  display: flex;
+  background: #fff;
+  border: 0px solid var(--cinza-200);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,.04);
+  justify-content: center;
+}
+
 /* ======================
    Grid
 ====================== */
@@ -200,17 +210,20 @@ legend {
   border-radius: 1rem;
   overflow: hidden;
 }
-#first {
-  width: 40%;
-}
 
 /* ======================
    Rodapé
 ====================== */
 .footer {
+  display: flex;
   background: #0f172a;
   color: #e2e8f0;
   padding: 2rem 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: left;
+
 }
 .footer a {
   color: #93c5fd;

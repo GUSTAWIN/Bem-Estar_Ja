@@ -7,18 +7,61 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+    <header class="header">
+    <nav class="nav container" aria-label="Principal">
+      <a class="logo" href="index.html" aria-label="Bem-Estar Já, página inicial">
+        <img class="logo-svg" src="coracao_positivo.png" alt="">
+        <span>Bem-Estar Já</span>
+      </a>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#faq">Fale conosco</a>
+        <a role="menuitem" href="entrar.html">Entrar</a>
+        <a class="btn" role="menuitem" href="cadastro.html">Quero me cadastrar</a>
+      </div>
+      
+    </nav>
+  </header>
+    <main class="form" id="form">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+    <div class="card-un">
+          <article class="card-un">
+            <div>
+                <h1>CADASTRO</h1>
+                <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
 
-        <button type="submit">Cadastrar</button>
-    </form>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+
+                <button type="submit">CADASTRAR</button>
+                </form>
+            </div>
+          </article>
+        </div>
+
+    
+    </main>
+
+  <footer class="footer" id="faq">
+    <div class="container" style="display:grid; gap:1rem">
+      <div style="display:flex; gap:1rem; flex-wrap:wrap">
+        <a href="index.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Login</a>
+        <a href="https://validator.w3.org/" target="_blank" rel="noopener">Validador HTML</a>
+        <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">Validador CSS</a>
+      </div>
+      <small>Currículos da equipe:
+        <a href="cur- gus/Curriculo-gus.html">Gustavo Taborda</a> •
+        <a href="#">Integrante 2</a> •
+        <a href="#">Integrante 3</a>
+      </small>
+      <small>© 2025 Bem-Estar Já • Projeto acadêmico sem fins lucrativos.</small>
+    </div>
+  </footer>
 </body>
 </html>
