@@ -73,7 +73,7 @@ a:hover {
   font-weight: 700;
   color: var(--cinza-900);
 }
-.logo svg {
+.logo-svg {
   width: 28px;
   height: 28px;
 }
@@ -138,10 +138,10 @@ a:hover {
 }
 .card {
   background: #fff;
-  border: 1px solid var(--cinza-200);
+  border: 2px solid var(--cinza-200);
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+  box-shadow: 0 5px 10px rgba(0,0,0,.04);
 }
 .card h3 {
   margin: .25rem 0;
@@ -199,6 +199,9 @@ legend {
 .banner {
   border-radius: 1rem;
   overflow: hidden;
+}
+#first {
+  width: 40%;
 }
 
 /* ======================
