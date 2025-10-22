@@ -1,0 +1,47 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+h1{
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: brown;
+    background-color: rgba(165, 42, 42, 0.329);
+}
+
+a[href] {
+  color: blue;
+}
+
+a:hover{
+    color: rgb(129, 21, 172);
+}
+
+.dados-pessoais{
+    font-style: italic;
+}
+
+.eu{
+    font-style: oblique;
+}
+
+h2{
+    color: brown;
+    background-color: rgba(165, 42, 42, 0.329);
+}
+
+p:last-child {
+  text-decoration: underline;
+}
+
+#resumo{
+    text-decoration: underline;
+}
+
+#linkGit{
+    a:hover{
+        color: rgb(18, 185, 171);
+    }
+}

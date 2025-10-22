@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-color: #f0f2f5; 
+  color: #333;
+  line-height: 1.6;
+}
+
+body > header, body > section, body > footer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid #0077b5;
+  padding-bottom: 20px;
+}
+
+#nome {
+  font-family: 'Merriweather', serif; 
+  color: #003366;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.titulo-secao {
+  font-family: 'Merriweather', serif;
+  color: #0077b5;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee; 
+}
+
+a[target="_blank"]::after {
+  content: ' ↗';
+  font-size: 0.8em;
+}
+
+a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
+a {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.destaque {
+  font-weight: 500; 
+}
+.italico {
+  font-style: italic;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  border: 5px solid #0077b5;
+  object-fit: cover;
+}
+
+.contato {
+  list-style: none;
+  padding: 0;
+}
+
+.icone-contato {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.imagem-ods {
+  display: block;
+  margin: 15px auto 0 auto;
+  width: 150px;
+  height: auto;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 40px;
+}

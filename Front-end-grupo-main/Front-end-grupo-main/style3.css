@@ -1,0 +1,262 @@
+
+/* ======================
+   Variáveis de Cores
+====================== */
+:root {
+  --cor-primaria: #2DBA7A; /* verde saúde */
+  --cor-secundaria: #2B6CB0; /* azul confiança */
+  --cor-apoio: #F6AD55;     /* laranja energia */
+  --cinza-900: #1A202C;
+  --cinza-600: #4A5568;
+  --cinza-200: #EDF2F7;
+  --branco: #ffffff;
+}
+
+/* ======================
+   Reset / Base
+====================== */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--cinza-900);
+  background: linear-gradient(180deg, #fff, #f9fbff);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   Layout Geral
+====================== */
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+.section {
+  padding: 3rem 0;
+}
+
+/* ======================
+   Cabeçalho e Navegação
+====================== */
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid var(--cinza-200);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.logo {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  font-weight: 700;
+  color: var(--cinza-900);
+}
+.logo-svg {
+  width: 28px;
+  height: 28px;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+.menu a {
+  padding: .5rem .75rem;
+  border-radius: .75rem;
+}
+.menu a:hover {
+  background: var(--cinza-200);
+}
+
+/* ======================
+   Botões
+====================== */
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  font-weight: 600;
+  background: var(--cor-primaria);
+  color: #fff;
+}
+.btn:hover {
+  filter: brightness(.95);
+}
+
+/* ======================
+   Hero Section
+====================== */
+.hero {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  background: var(--cinza-200);
+  font-size: .9rem;
+}
+.hero-illustration {
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(37,99,235,.15);
+}
+
+/* ======================
+   Cards
+====================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border: 2px solid var(--cinza-200);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,.04);
+}
+.card h3 {
+  margin: .25rem 0;
+}
+
+.card-un{
+  display: flex;
+  background: #fff;
+  border: 0px solid var(--cinza-200);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,.04);
+  justify-content: center;
+}
+
+/* ======================
+   Grid
+====================== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+#rotina{
+  padding-top: 1;
+}
+
+/* ======================
+   Formulários
+====================== */
+.form {
+  display: grid;
+  gap: 1rem;
+}
+.input {
+  display: grid;
+  gap: .4rem;
+}
+.input input, .input select, .input textarea {
+  padding: .8rem 1rem;
+  border-radius: .75rem;
+  border: 1px solid var(--cinza-200);
+  font: inherit;
+}
+small.help {
+  color: var(--cinza-600);
+}
+fieldset {
+  border: 1px dashed var(--cinza-200);
+  border-radius: .75rem;
+  padding: 1rem;
+}
+legend {
+  padding: 0 .5rem;
+  color: var(--cinza-600);
+}
+
+/* ======================
+   Outros Componentes
+====================== */
+.alert {
+  background: #ecfeff;
+  border: 1px solid #bae6fd;
+  color: #0c4a6e;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+}
+.banner {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+}
+
+/* ======================
+   Rodapé
+====================== */
+.footer {
+  display: flex;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 0;
+}
+.footer-fixo {
+  display: flex;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: left;
+
+}
+.footer a {
+  color: #93c5fd;
+}
+.footer-fixo a {
+  color: #93c5fd;
+}
+
+/* ======================
+   Responsividade
+====================== */
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
