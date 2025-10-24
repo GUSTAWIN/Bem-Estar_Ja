@@ -1,4 +1,4 @@
-# Front-end-grupo
+# Bem-Estar_Já
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
