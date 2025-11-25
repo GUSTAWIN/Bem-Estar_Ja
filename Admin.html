@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style3.css" />
-    
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css" />
+  <title>Cadastro - Admin</title>
 </head>
+
 <body>
-    <header class="header">
+  <header class="header">
     <nav class="nav container" aria-label="Principal">
       <a class="logo" href="index.html" aria-label="Bem-Estar Já, página inicial">
         <img class="logo-svg" src="coracao_positivo.png" alt="">
@@ -16,37 +17,42 @@
       </a>
       <div class="menu" role="menubar">
         <a role="menuitem" href="#faq">Fale conosco</a>
-        
         <a class="btn" role="menuitem" href="cadastro.html">Quero me cadastrar</a>
       </div>
-      
     </nav>
   </header>
-    <main class="form" id="form">
 
+  <main class="form" id="form">
     <div class="card-un">
-          <article class="card-un">
-            <div>
-                <h1>Admin</h1>
-                <form action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br><br>
+      <article class="card-un">
+        <div>
+          <h1>Admin</h1>
+          <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-                <button type="submit">Cadastrar</button>
-                <button type="reset">Limpar</button>
-                </form>
-            </div>
-          </article>
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar Campos</button>
+          </form>
         </div>
+      </article>
+    </div>
+  </main>
 
+  <div style="text-align: center; margin: 20px auto; max-width: 600px;">
     
-    </main>
-    <input type="text" id="pesquisa" placeholder="Pesquisar...">
-    <button class="delete_All" id="excluir_Tudo" type="button">Excluir Tudo</button>
-    <ul id="userList"></ul>
+    <input type="text" id="pesquisa" placeholder="Pesquisar nome ou e-mail...">
+    <button id="btnPesquisar" type="button">Pesquisar</button>
+    <button id="btnLimparPesquisa" type="button">Limpar Pesquisa</button>
+    <br><br>
+    <button class="delete_All" id="excluir_Tudo" type="button" style="background-color: #d9534f; color: white;">Excluir Tudo</button>
+
+    <ul id="userList" style="list-style: none; padding: 0; margin-top: 20px;"></ul>
+  
+  </div>
 
   <footer class="footer" id="faq">
     <div class="container" style="display:grid; gap:1rem">
@@ -56,9 +62,9 @@
         <a href="login.html">Login</a>
       </div>
       <small>Currículos da equipe:
-        <a href="cur- gus/Curriculo-gus.html">Gustavo Taborda</a> •
-        <a href="Meu-Curriculum-Vitae-Giovane/Meu-Curriculum-Vitae-main/index.html">Giovane Soldera</a> •
-        <a href="Curriculo-Cadu-main/index.html">Carlos Eduardo</a>
+        <a href="#">Gustavo Taborda</a> •
+        <a href="#">Giovane Soldera</a> •
+        <a href="#">Carlos Eduardo</a>
       </small>
       <small>© 2025 Bem-Estar Já • Projeto acadêmico sem fins lucrativos.</small>
     </div>

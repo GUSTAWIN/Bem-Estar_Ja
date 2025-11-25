@@ -1,90 +1,114 @@
 var userList = [];
-var count = 1;
+var count = 1; 
+
+
+getUserList();
+renderUserList();
 
 function addUser(name, email) {
-    var newUser = { id: count++, name: name, email: email };
-    userList.push(newUser);
-    localStorage.setItem('userList', JSON.stringify(userList));
-    renderUserList();
+
+  var newUser = { id: Date.now(), name: name, email: email };
+  userList.push(newUser);
+  saveAndRender();
 }
 
 function deleteUser(userId) {
   var updatedUserList = userList.filter(function (user) {
-    return user.id !== userId; //retorna todos os elementos que nÃ£o sejam no ID selecionado
+    return user.id !== userId; 
   });
-  if (updatedUserList.length < userList.length) { //verifica se a lista atualizada Ã© diferente da lista original
+
+  if (updatedUserList.length < userList.length) { 
     userList = updatedUserList;
-    localStorage.setItem('userList', JSON.stringify(userList)); 
-    renderUserList();
+    saveAndRender();
   } else {
     alert('Usuario nao encontrado.');
   }
 }
 
 function deleteAll() {
+  if (confirm("Tem certeza que deseja excluir todos os registros?")) {
     userList = [];
-    localStorage.setItem('userList', JSON.stringify(userList)); 
+    saveAndRender();
+  }
+}
+
+// Função auxiliar para salvar e renderizar
+function saveAndRender() {
+    localStorage.setItem('userList', JSON.stringify(userList));
     renderUserList();
 }
 
 function getUserList() {
-    var storedList = JSON.parse(localStorage.getItem('userList'));
-    userList = storedList || [];
+  var storedList = JSON.parse(localStorage.getItem('userList'));
+  userList = storedList || [];
 }
 
-function renderUserList() {
-    var userListElement = document.getElementById('userList');
-    userListElement.innerHTML = ''; //limpa o conteúdo HTML do elemento patientListElement
+ //Aceita uma lista opcional. Se não passar nada, usa a lista completa.
+function renderUserList(listaParaExibir) {
+  var userListElement = document.getElementById('userList');
+  
+  // Proteção caso o HTML não tenha carregado a UL
+  if (!userListElement) return;
 
-    userList.forEach(function (user) {
-        var listItem = document.createElement('li');
-        //renderiza a lista de pacientes. Itera sobre cada paciente na lista encontrada e cria um <li> para cada paciente
-        listItem.innerHTML = '<span class="User-name">' + user.name + '</span> (E-mail: ' + user.email + ') <button class="delete-button" onclick="deleteUser(' + user.id + ')">Excluir</button>';
-        userListElement.appendChild(listItem);
+  userListElement.innerHTML = ''; 
+
+  // Define qual lista usar: a filtrada ou a completa
+  var lista = listaParaExibir || userList;
+
+  lista.forEach(function (user) {
+    var listItem = document.createElement('li');
+   
+    listItem.style.borderBottom = "1px solid #ccc";
+    listItem.style.padding = "10px";
+    
+    listItem.innerHTML = 
+        '<strong>' + user.name + '</strong> <br>' + 
+        '(E-mail: ' + user.email + ') ' + 
+        '<button class="delete-button" onclick="deleteUser(' + user.id + ')" style="margin-left:10px; color:red;">Excluir</button>';
+    
+    userListElement.appendChild(listItem);
+  });
+}
+
+// --- FUNÇÕES DE PESQUISA ---
+
+function realizarPesquisa() {
+    var termo = document.getElementById('pesquisa').value.toLowerCase();
+    
+    var listaFiltrada = userList.filter(function(user) {
+        return user.name.toLowerCase().includes(termo) || 
+               user.email.toLowerCase().includes(termo);
     });
+
+    renderUserList(listaFiltrada);
 }
 
-getUserList();
-renderUserList();
+function limparPesquisa() {
+    document.getElementById('pesquisa').value = '';
+    renderUserList(); // Mostra tudo de novo
+}
+
+// --- EVENT LISTENERS ---
 
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
   var nameInput = document.getElementById('nome');
   var emailInput = document.getElementById('email');
-  addUser(nome.value, email.value);
-  nameInput.value = '';
-  emailInput.value = '';
+  
+  if (nameInput.value && emailInput.value) {
+      addUser(nameInput.value, emailInput.value);
+      nameInput.value = '';
+      emailInput.value = '';
+  }
 });
 
-document.getElementById('form').addEventListener('rest', function (event) {
-  event.preventDefault();
-  nameInput.value = '';
-  emailInput.value = '';
+
+document.getElementById('form').addEventListener('reset', function (event) {
+   
 });
 
-const excluir_Tudo = document.querySelector('#excluir_Tudo');
-excluir_Tudo.addEventListener('click', function() {
-  deleteAll();
-});
+document.getElementById('excluir_Tudo').addEventListener('click', deleteAll);
 
-const barraDePesquisa = document.querySelector("#pesquisa");
-barraDePesquisa.addEventListener("input", () => {
-  // Converte o texto digitado para minúsculas
-  const textoPesquisa = barraDePesquisa.value.toLowerCase();
-  const userList1 = userList;
+document.getElementById('btnPesquisar').addEventListener('click', realizarPesquisa);
 
-  // Itera sobre cada item da lista
-  itens.forEach((item) => {
-    // Converte o texto do item para minúsculas
-    const textoItem = item.textContent.toLowerCase();
-
-    // Verifica se o texto do item inclui o texto da pesquisa
-    if (textoItem.includes(textoPesquisa)) {
-      // Se incluir, exibe o item
-      item.style.display = "block";
-    } else {
-      // Se não incluir, oculta o item
-      item.style.display = "none";
-    }
-  });
-});
+document.getElementById('btnLimparPesquisa').addEventListener('click', limparPesquisa);
