@@ -1,11 +1,13 @@
-
 /* ======================
    Variáveis de Cores
 ====================== */
 :root {
-  --cor-primaria: #2DBA7A; /* verde saúde */
-  --cor-secundaria: #2B6CB0; /* azul confiança */
-  --cor-apoio: #F6AD55;     /* laranja energia */
+  --cor-primaria: #2DBA7A;
+  /* verde saúde */
+  --cor-secundaria: #2B6CB0;
+  /* azul confiança */
+  --cor-apoio: #F6AD55;
+  /* laranja energia */
   --cinza-900: #1A202C;
   --cinza-600: #4A5568;
   --cinza-200: #EDF2F7;
@@ -18,23 +20,28 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--cinza-900);
   background: linear-gradient(180deg, #fff, #f9fbff);
 }
+
 img {
   max-width: 100%;
   display: block;
 }
+
 a {
   color: var(--cor-secundaria);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -46,6 +53,7 @@ a:hover {
   width: min(1120px, 92vw);
   margin: 0 auto;
 }
+
 .section {
   padding: 3rem 0;
 }
@@ -57,15 +65,17 @@ a:hover {
   position: sticky;
   top: 0;
   backdrop-filter: saturate(180%) blur(8px);
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid var(--cinza-200);
 }
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
 }
+
 .logo {
   display: flex;
   gap: .5rem;
@@ -73,18 +83,22 @@ a:hover {
   font-weight: 700;
   color: var(--cinza-900);
 }
+
 .logo-svg {
   width: 28px;
   height: 28px;
 }
+
 .menu {
   display: flex;
   gap: 1rem;
 }
+
 .menu a {
   padding: .5rem .75rem;
   border-radius: .75rem;
 }
+
 .menu a:hover {
   background: var(--cinza-200);
 }
@@ -100,6 +114,7 @@ a:hover {
   background: var(--cor-primaria);
   color: #fff;
 }
+
 .btn:hover {
   filter: brightness(.95);
 }
@@ -114,6 +129,7 @@ a:hover {
   grid-template-columns: 1.1fr .9fr;
   align-items: center;
 }
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -123,9 +139,10 @@ a:hover {
   background: var(--cinza-200);
   font-size: .9rem;
 }
+
 .hero-illustration {
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(37,99,235,.15);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, .15);
 }
 
 /* ======================
@@ -136,24 +153,26 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+
 .card {
   background: #fff;
   border: 2px solid var(--cinza-200);
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 5px 10px rgba(0,0,0,.04);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .04);
 }
+
 .card h3 {
   margin: .25rem 0;
 }
 
-.card-un{
+.card-un {
   display: flex;
   background: #fff;
   border: 0px solid var(--cinza-200);
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 5px 10px rgba(0,0,0,.04);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .04);
   justify-content: center;
 }
 
@@ -173,24 +192,31 @@ a:hover {
   display: grid;
   gap: 1rem;
 }
+
 .input {
   display: grid;
   gap: .4rem;
 }
-.input input, .input select, .input textarea {
+
+.input input,
+.input select,
+.input textarea {
   padding: .8rem 1rem;
   border-radius: .75rem;
   border: 1px solid var(--cinza-200);
   font: inherit;
 }
+
 small.help {
   color: var(--cinza-600);
 }
+
 fieldset {
   border: 1px dashed var(--cinza-200);
   border-radius: .75rem;
   padding: 1rem;
 }
+
 legend {
   padding: 0 .5rem;
   color: var(--cinza-600);
@@ -206,11 +232,13 @@ legend {
   padding: .75rem 1rem;
   border-radius: .75rem;
 }
+
 .banner {
   border-radius: 1rem;
   overflow: hidden;
 }
-.banner img{
+
+.banner img {
   width: 100%;
   height: 100%;
 }
@@ -228,6 +256,7 @@ legend {
   width: 100%;
   text-align: left;
 }
+
 .footer-fixo {
   display: flex;
   background: #0f172a;
@@ -239,9 +268,11 @@ legend {
   text-align: left;
 
 }
+
 .footer a {
   color: #93c5fd;
 }
+
 .footer-fixo a {
   color: #93c5fd;
 }
@@ -253,47 +284,154 @@ legend {
   .hero {
     grid-template-columns: 1fr;
   }
+
   .cards {
     grid-template-columns: 1fr;
   }
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
 }
+
 /* ======================
    Botoes da lista
 ====================== */
 
-  .delete-button {
-    float: right;
-    padding: 5px 10px;
-    background-color: #9d9d9d;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+.delete-button {
+  float: right;
+  padding: 5px 10px;
+  background-color: #9d9d9d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  .delete_All {
-    float: right;
-    padding: 5px 10px;
-    padding-bottom: 2px;
-    background-color: #f82121;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .delete-button:hover {
-    background-color: #d32f2f;
-  }
+.delete_All {
+  float: right;
+  padding: 5px 10px;
+  padding-bottom: 2px;
+  background-color: #f82121;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 5px;
-  }
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* ======================
+   ACESSIBILIDADE
+====================== */
+
+#acessibilidade-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+
+#acessibilidade-container button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #2D3748;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+#acessibilidade-container button:hover {
+  background: #1A202C;
+}
+
+/* Alto Contraste */
+body.alto-contraste {
+  background: black !important;
+  color: yellow !important;
+}
+
+body.alto-contraste a {
+  color: cyan !important;
+}
+
+body.alto-contraste button {
+  background: yellow !important;
+  color: black !important;
+}
+
+body.alto-contraste li {
+  background: #222 !important;
+  color: yellow !important;
+  border: 1px solid yellow !important;
+}
+
+/* ===================================
+   ALTO CONTRASTE — CARDS E FORMULÁRIOS
+======================================*/
+
+body.alto-contraste .card-un,
+body.alto-contraste .card,
+body.alto-contraste main,
+body.alto-contraste form,
+body.alto-contraste input,
+body.alto-contraste textarea,
+body.alto-contraste select {
+    background: #000 !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+}
+
+body.alto-contraste input,
+body.alto-contraste textarea,
+body.alto-contraste select {
+    background: #111 !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+}
+
+body.alto-contraste label {
+    color: yellow !important;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3 {
+    color: yellow !important;
+}
+
+/* ALTO CONTRASTE — HEADER */
+body.alto-contraste .header {
+    background: #000 !important;
+    border-bottom: 1px solid yellow !important;
+}
+
+body.alto-contraste .nav a,
+body.alto-contraste .logo span {
+    color: yellow !important;
+}
+
+body.alto-contraste .menu a {
+    background: #000 !important;
+    color: yellow !important;
+}
+
+body.alto-contraste .btn {
+    background: yellow !important;
+    color: black !important;
+}

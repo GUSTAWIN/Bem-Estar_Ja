@@ -112,3 +112,28 @@ document.getElementById('excluir_Tudo').addEventListener('click', deleteAll);
 document.getElementById('btnPesquisar').addEventListener('click', realizarPesquisa);
 
 document.getElementById('btnLimparPesquisa').addEventListener('click', limparPesquisa);
+
+// ========================
+// ACESSIBILIDADE
+// ========================
+
+// Alternar Alto Contraste
+document.getElementById("btnContraste").addEventListener("click", function () {
+    document.body.classList.toggle("alto-contraste");
+});
+
+// Controle de tamanho da fonte
+let tamanhoFonteAtual = 16;
+
+document.getElementById("btnAumentarFonte").addEventListener("click", function () {
+    tamanhoFonteAtual += 1;
+    document.documentElement.style.fontSize = tamanhoFonteAtual + "px";
+});
+
+document.getElementById("btnDiminuirFonte").addEventListener("click", function () {
+    tamanhoFonteAtual -= 1;
+
+    if (tamanhoFonteAtual < 10) tamanhoFonteAtual = 10;
+
+    document.documentElement.style.fontSize = tamanhoFonteAtual + "px";
+});

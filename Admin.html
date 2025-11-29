@@ -43,17 +43,24 @@
   </main>
 
   <div style="text-align: center; margin: 20px auto; max-width: 600px;">
-    
+
     <input type="text" id="pesquisa" placeholder="Pesquisar nome ou e-mail...">
     <button id="btnPesquisar" type="button">Pesquisar</button>
     <button id="btnLimparPesquisa" type="button">Limpar Pesquisa</button>
-    <button class="delete_All" id="excluir_Tudo" type="button" style="background-color: #d9534f; color: white;">Excluir Tudo</button>
     <br><br>
-    
+    <button class="delete_All" id="excluir_Tudo" type="button" style="background-color: #d9534f; color: white;">Excluir
+      Tudo</button>
 
     <ul id="userList" style="list-style: none; padding: 0; margin-top: 20px;"></ul>
-  
+
   </div>
+  <!-- ACESSIBILIDADE -->
+  <div id="acessibilidade-container">
+    <button id="btnContraste">Alto Contraste</button>
+    <button id="btnAumentarFonte">A+</button>
+    <button id="btnDiminuirFonte">A-</button>
+  </div>
+
 
   <footer class="footer" id="faq">
     <div class="container" style="display:grid; gap:1rem">
@@ -72,4 +79,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
